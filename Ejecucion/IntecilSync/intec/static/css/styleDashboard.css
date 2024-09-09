@@ -23,7 +23,20 @@ body{
     position: fixed;
     width: 240px;
     background: #313645;
+    transition: all 0.5s ease;
 }
+
+
+
+.sidebar.active{
+    width: 60px;
+
+}
+
+
+
+
+
 
 .sidebar .logo-details{
     height: 80px;
@@ -85,7 +98,7 @@ body{
     color: #fff;
     font-size: 15px;
     font-weight: 400;
-
+    white-space: nowrap;
 }
 
 /* Home */
@@ -97,16 +110,205 @@ body{
     height: 100%;
     width: calc(100% - 240px);
     left: 240px;
+    transition: all 0.5s ease;
 }
 
+
+
+.sidebar.active ~ .home-section{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+
+
+
 .home-section nav{
+    position: fixed;
+    width: calc(100% - 240px);
+    left: 240px;
     height: 80px;
     background: #fff;
     padding: 0 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease;
 
 }
+
+.sidebar.active ~ .home-section nav{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.home-section nav .sidebar-button{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+
+}
+
+
+
+
+.home-section nav .sidebar-button i{
+
+    font-size: 35px;
+    margin-right: 10px;
+
+
+}
+
+
+.home-section nav .search-box{
+
+   
+    height: 50px;
+    width: 550px;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+nav .search-box input{
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    padding: 0 15px;
+    font-size: 17px;
+    color: #fff;
+    background: #F5F6FA;
+    border: 2px solid #EFEEF1;
+    outline: none;
+}
+
+nav .search-box .bx-search{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    background: #2697FF;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.home-section nav .profile-details{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    min-width: 190px;
+    background: #F5F6FA;
+    border: 2px solid #EFEEF1;
+    border-radius: 6px;
+    padding: 0 15px 0 2px;
+}
+
+
+nav .profile-details img{
+
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+nav .profile-details .admin-name{
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+
+
+nav .profile-details i{
+    color: #333;
+    font-size: 25px;
+}
+
+
+
+.home-section .home-content{
+
+    position: relative;
+    padding-top: 100px;
+}
+
+
+
+.home-content .overview-boxes .box{
+    background: #fff;
+    padding: 15px 14px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.home-content .overview-boxes .box-topic{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+.home-content .overview-boxes .number{
+    font-size: 35px;
+    font-weight: 500;
+    margin-top: -5px;
+    display: inline-block;
+}
+
+
+
+.home-content .overview-boxes .indicator{
+    display: flex;
+    align-items: center;
+}
+
+
+.home-content .overview-boxes .indicator i{
+    height: 20px;
+    width: 20px;
+    background: #8fdacb;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+.home-content .overview-boxes .indicator .text{
+    font-size: 12px;
+
+}
+
+
+.overview-boxes .box .cart{
+    font-size: 32px;
+    font-weight: 500;
+    height: 50px;
+    width: 50px;
+    background: #cce5ff;
+    color: #66b0ff;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+
+
+
 
 
 
