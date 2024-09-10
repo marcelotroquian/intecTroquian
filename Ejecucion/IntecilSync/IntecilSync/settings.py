@@ -122,10 +122,13 @@ STATIC_URL = '/static/'
 # Ruta al directorio donde se recopilan los archivos estáticos para producción
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Directorios adicionales para buscar archivos estáticos
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGIN_URL = 'login' 
+DATE_FORMAT = 'd/m/Y'  # Redirige después del login
+LOGOUT_REDIRECT_URL = '/login'  # Redirige después del logout
