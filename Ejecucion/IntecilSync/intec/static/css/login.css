@@ -1,3 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
+    
+   
+
+
 body {
     margin: 0;
     padding: 0;
@@ -16,9 +22,10 @@ body {
     max-width: 640px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 #2A372C;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     overflow: hidden;
-    position: relative
+    position: relative;
+    border-style: groove;
 }
 
 .login-box {
@@ -99,7 +106,7 @@ body {
 .label-checkbox {
     left: 60px;
     position: absolute;
-
+    
     width: 80%;
 }
 
