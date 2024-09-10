@@ -20,7 +20,7 @@ def login_view(request):
         else:
             error_message = "Credenciales no válidas. Por favor, inténtalo de nuevo."
             request.session['error_message'] = error_message
-            return redirect('inicio')
+            return redirect('login')
         
 
     error_message = request.session.pop('error_message', None)
@@ -30,3 +30,7 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('login')  # Redirige a la página de login después del logout
+
+
+def inicio(request):
+    return render(request, "visa/inicio.html")

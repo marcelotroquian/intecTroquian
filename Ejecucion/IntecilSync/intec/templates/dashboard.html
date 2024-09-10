@@ -20,34 +20,33 @@
         
         <ul class="nav-links">
             <li>
-                <a href="#">
-                    <i class="bx bx-box"></i>
-                    <span class="link_name">Producto</span>
+                <a href="{% url 'inicio' %}">
+                  <i class='bx bx-home'></i>
+                    <span class="link_name">Inicio</span>
                 </a>
             </li>
 
             <li>
                 <a href="#">
-                    <i class="bx bx-box"></i>
-                    <span class="link_name">Producto</span>
+                  <i class='bx bx-add-to-queue' ></i>
+                    <span class="link_name">Formulario Lote VISA</span>
                 </a>
             </li>
 
         
 
-
             <li>
                 <a href="#">
-                    <i class="bx bx-box"></i>
-                    <span class="link_name">Producto</span>
+                  <i class='bx bx-list-ul' ></i>
+                    <span class="link_name">Lotes Subidos</span>
                 </a>
             </li>
 
 
             <li>
                 <a href="#">
-                    <i class="bx bx-box"></i>
-                    <span class="link_name">Producto</span>
+                  <i class='bx bx-search-alt-2' ></i>
+                    <span class="link_name">Buscar</span>
                 </a>
             </li>
             
@@ -63,10 +62,10 @@
                <i class="bx bx-menu sidebarBtn"></i>
              <span class="dashboard">Dashboard</span> 
             </div>
-            <div class="search-box">
+           <!--  <div class="search-box">
                 <input type="text" placeholder="Search...">
                 <i class="bx bx-search"></i>
-            </div>
+            </div> -->
 
             <div class="profile-details">
                  <img src="{% static 'img/GKmH0WEX0AAbeaL.jpg' %}" alt="latto"> 
@@ -85,8 +84,8 @@
     <!-- Home Content-->
             
     <div class="home-content">
-
-
+      {% block contenido %} 
+<!-- 
         <div class="overview-boxes">
             <div class="box">
               <div class="right-side">
@@ -257,8 +256,8 @@
                   </div>
                 </div>
           
-            </div>
-            
+            </div> -->
+            {% endblock %}
     </section>
 
 
