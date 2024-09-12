@@ -121,8 +121,17 @@ body{
 }
 
 
-
-
+.sidebar .nav-links li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.sidebar .nav-links .log_out{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 .home-section nav{
     
     display: flex;
@@ -209,11 +218,11 @@ nav .search-box .bx-search{
 .home-section nav .profile-details{
     display: flex;
     align-items: center;
-    height: 50px;
-    min-width: 190px;
     background: #F5F6FA;
     border: 2px solid #EFEEF1;
     border-radius: 6px;
+    height: 50px;
+    min-width: 190px;
     padding: 0 15px 0 2px;
 }
 
