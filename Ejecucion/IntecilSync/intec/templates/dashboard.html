@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{% static 'css/styleDashboard.css' %}">
     <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
     
+
+  
 <body>
     <div class="sidebar">
         <div class="logo-details">
@@ -30,7 +32,7 @@
             </li>
 
             <li>
-                <a href="#">
+              <a href="{% url 'formularioVisa' %}">
                   <i class='bx bx-add-to-queue' ></i>
                     <span class="link_name">Formulario Lote VISA</span>
                 </a>

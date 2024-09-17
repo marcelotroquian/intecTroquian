@@ -8,6 +8,10 @@ from django.contrib.auth.decorators import login_required
 def dashboard(request):
     return render(request, 'dashboard.html')
 
+@login_required
+def formularioVisa(request):
+    return render(request, 'visa/formularioVisa.html')
+
 
 @login_required
 def inicio(request):
