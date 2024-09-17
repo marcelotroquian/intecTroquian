@@ -127,8 +127,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Redirige a la página principal después de iniciar sesión
+LOGIN_REDIRECT_URL = 'inicio'
+
+# Redirige a la página de inicio de sesión si el usuario no está autenticado
+LOGIN_URL = '/login/'
+
+# Redirige a la página principal después de cerrar sesión
+LOGOUT_REDIRECT_URL = 'login'
 
 
-LOGIN_URL = 'login' 
 DATE_FORMAT = 'd/m/Y'  # Redirige después del login
-LOGOUT_REDIRECT_URL = '/login'  # Redirige después del logout
+
