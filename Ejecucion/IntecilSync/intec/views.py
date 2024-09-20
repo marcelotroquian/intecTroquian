@@ -17,22 +17,6 @@ def formularioVisa(request):
 def inicio(request):
     return render(request, "visa/inicio.html")
 
-def login_view(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('dashboard')  # Redirige a la página deseada después del login
-        else:
-            error_message = "Credenciales no válidas. Por favor, inténtalo de nuevo."
-            request.session['error_message'] = error_message
-            return redirect('login')
-        
-
-    error_message = request.session.pop('error_message', None)
-    return render(request, 'users/login.html', {'error_message': error_message})
 
 
 def logout_view(request):

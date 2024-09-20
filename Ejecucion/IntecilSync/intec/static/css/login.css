@@ -1,8 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
-    
-   
-
 
 body {
     margin: 0;
@@ -125,12 +121,11 @@ body {
 
 }
 
-
 .error-message {
     position: absolute;
-    top: 90%; /* Adjust the position */
-    left:85%;
-    transform: translateX(-50%);
+    bottom: 20px; /* Posición al fondo del contenedor con un margen */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
     background-color: #f8d7da;
     color: #721c24;
     padding: 15px 20px;
@@ -138,13 +133,16 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     white-space: nowrap;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
-    z-index: 10; /* Ensure it is above other elements */
+    opacity: 0; /* Inicia oculto */
+    transition: opacity 0.5s ease-in-out; /* Transición suave */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
 }
+
 .error-message.show {
     opacity: 1; /* Show the error message */
 }
+
+
 /* Media Queries */
 @media (max-width: 600px) {
     .login-container {

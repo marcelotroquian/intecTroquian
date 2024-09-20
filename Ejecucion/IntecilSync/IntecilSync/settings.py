@@ -55,7 +55,7 @@ ROOT_URLCONF = 'IntecilSync.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,7 +117,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 # Ruta al directorio de archivos estáticos
-STATIC_URL = '/static/'
+
 
 # Ruta al directorio donde se recopilan los archivos estáticos para producción
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -131,11 +131,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'inicio'
 
 # Redirige a la página de inicio de sesión si el usuario no está autenticado
-LOGIN_URL = '/login/'
+LOGIN_URL = '/'
 
 # Redirige a la página principal después de cerrar sesión
-LOGOUT_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = '/'
 
 
 DATE_FORMAT = 'd/m/Y'  # Redirige después del login
 
+STATIC_URL = '/static/'

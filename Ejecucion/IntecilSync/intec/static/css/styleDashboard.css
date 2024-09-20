@@ -101,6 +101,38 @@ body{
     white-space: nowrap;
 }
 
+
+.logout-button {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: transparent; /* Asegura que el fondo del botón sea transparente */
+  border: none; /* Elimina el borde predeterminado del botón */
+  padding: 0; /* Elimina el padding predeterminado del botón */
+  cursor: pointer; /* Cambia el cursor para indicar que es clicable */
+  transition: background 0.4s ease; /* Mantiene la transición de fondo */
+}
+
+.logout-button:hover {
+  background: #718095; /* Aplica el mismo color de fondo al hacer hover */
+}
+
+
+
+.logout-button i {
+  min-width: 60px;
+  text-align: center;
+  color: #fff; /* Asegura que el icono sea blanco */
+  font-size: 18px;
+}
+
+.logout-button .links_name {
+  color: #fff; /* Asegura que el texto sea blanco */
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
 /* Home */
 
 .home-section{
@@ -127,11 +159,18 @@ body{
   font-weight: 400;
   white-space: nowrap;
 }
+
+
+
+
 .sidebar .nav-links .log_out{
   position: absolute;
   bottom: 0;
   width: 100%;
 }
+
+
+
 .home-section nav{
     
     display: flex;
@@ -222,32 +261,43 @@ nav .search-box .bx-search{
     border: 2px solid #EFEEF1;
     border-radius: 6px;
     height: 50px;
-    min-width: 190px;
+    min-width: 160px;
     padding: 0 15px 0 2px;
+
+ 
 }
 
 
 nav .profile-details img{
 
-    height: 40px;
-    width: 40px;
-    object-fit: cover;
-    border-radius: 6px;
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+ 
 }
 
 nav .profile-details .admin-name{
-    font-size: 15px;
-    font-weight: 500;
-    color: #333;
-    margin: 0 10px;
-    white-space: nowrap;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 10px;
+  white-space: nowrap;
+  flex-grow: 1; /* Esto permite que el nombre ocupe el espacio disponible */
+  overflow: hidden; /* Para evitar desbordamientos */
+  text-overflow: ellipsis; /* Para mostrar puntos suspensivos si el texto es muy largo */
+  
+  
+
+  
 }
 
 
 
 nav .profile-details i{
-    color: #333;
-    font-size: 25px;
+  color: #333;
+  font-size: 25px;
+
 }
 
 
@@ -434,6 +484,20 @@ nav .profile-details i{
     font-weight: 400;
     color: #333;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   /* Responsive Media Query */
   @media (max-width: 1240px) {
     .sidebar{
@@ -551,4 +615,55 @@ nav .profile-details i{
     .responsive-logo {
         max-width: 100px; /* Ancho máximo del logo para pantallas muy pequeñas */
     }
+}
+
+
+.profile-details {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown li {
+  padding: 10px 15px;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .profile-details {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .dropdown {
+      right: auto;
+      left: 0;
+  }
 }
