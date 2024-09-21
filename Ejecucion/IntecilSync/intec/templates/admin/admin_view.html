@@ -1,0 +1,30 @@
+
+{% extends "dashboard.html" %}
+
+{% block pagename %} Admin {% endblock %}
+
+{% load static %}
+
+
+
+{% block contenido %}
+
+
+
+
+
+<body>
+    {{error}}
+    <form action="/intec/admin_view" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>
+            signup
+        </button>
+    </form>
+</body>
+
+</html>
+
+
+{% endblock %}

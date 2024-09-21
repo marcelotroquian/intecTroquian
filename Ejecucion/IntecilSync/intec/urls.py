@@ -6,6 +6,7 @@ urlpatterns = [
     path('dashboard', views.dashboard, name='dashboard'),
     path('inicio', views.inicio, name='inicio'),
     path('formularioVisa', views.formularioVisa, name='formularioVisa'),
+    path('admin_view', views.admin_view, name='admin_view'),
     # path('login', views.login_view, name='login'),
     # path('logout', auth_views.LogoutView.as_view(), name='logout'),
     

@@ -37,8 +37,9 @@
                     <span class="link_name">Formulario Lote VISA</span>
                 </a>
             </li>
-
-        
+            
+            
+           
 
             <li>
                 <a href="#">
@@ -55,7 +56,12 @@
                 </a>
             </li>
             
-
+            <li>
+              <a href="{% url 'admin_view' %}">
+                <i class='bx bx-user'></i>
+                    <span class="link_name">Admin</span>
+                </a>
+            </li>
 
             <li class="log_out">
               <form method="post" action="{% url 'logout' %}">
